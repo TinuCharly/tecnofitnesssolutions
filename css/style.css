@@ -9308,6 +9308,9 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   font-weight: bold;
   color: #333;
 }
+.contact-wrapper {
+  display: flex;
+}
 
 .contact-description {
   max-width: 900px;
@@ -9418,6 +9421,7 @@ textarea {
 
 .whatsapp-main {
   position: fixed;
+  z-index: 999;
   bottom: 70px;
   width: 60px;
   height: 60px;
@@ -9432,6 +9436,8 @@ textarea {
   color: white;
   animation: floating 2s ease-in-out infinite;
 }
+
+
 @keyframes floating {
   0% {
     transform: translateY(0px);
@@ -9441,5 +9447,18 @@ textarea {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+  .contact-section {
+    padding: 12px;
+    padding-top: 32px;
   }
 }
