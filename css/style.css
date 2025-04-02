@@ -9317,15 +9317,14 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-top: 3rem;
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 1rem;
 }
 
@@ -9336,13 +9335,14 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   align-items: center;
   justify-content: center;
   background-color: rgba(29, 161, 242, 0.1);
+  color: #FE0000;
   border-radius: 50%;
 }
 
 .contact-item-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #333;
+  color: #fff;
 }
 
 .contact-item-description {
@@ -9351,7 +9351,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 
 .contact-item a {
-  color: #1da1f2;
+  color: #ffffff8a;
   text-decoration: none;
 }
 
@@ -9365,7 +9365,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 3rem;
+  flex: 1;
 }
 
 .form-title {
@@ -9402,7 +9402,7 @@ textarea {
 .submit-button {
   width: 100%;
   padding: 1rem;
-  background-color: #1da1f2;
+  background-color: #FE0000;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -9412,17 +9412,34 @@ textarea {
 }
 
 .submit-button:hover {
-  background-color: #0a85d8;
+  background-color: #c10202;
 }
 
 
 .whatsapp-main {
   position: fixed;
-  bottom: 100px;
-  right: 50px;
-  display: block;
+  bottom: 70px;
+  width: 60px;
+  height: 60px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
   padding: 20px;
   border-radius: 50%;
-  background-color: green;
+  background-color: #24cc63;
   color: white;
+  animation: floating 2s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
