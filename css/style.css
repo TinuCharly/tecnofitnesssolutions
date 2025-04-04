@@ -9462,3 +9462,42 @@ textarea {
     padding-top: 32px;
   }
 }
+
+ /* Popup Styling */
+ .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  z-index: 999;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.popup.show {
+  display: block;
+}
+.popup.success {
+  border: 2px solid green;
+
+  h4 {
+    color: green;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+.popup.error {
+  border: 2px solid red;
+  color: red;
+}
+
+/* Hide the iframe */
+iframe {
+  display: none;
+}
