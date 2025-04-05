@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecno fitness solutions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .accordion-item {
+      background-color: #fff;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border-left: 5px solid #009688;
+    }
+
+    .accordion-header {
+      cursor: pointer;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .accordion-header:hover {
+      background-color: #f1f1f1;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      padding: 0 20px 20px;
+      display: none;
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+      border-top: 1px solid #eee;
+      background-color: #fafafa;
+    }
+
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-container">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>What services does Tecno Fitness Solutions offer?</span>
+        <span class="accordion-icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        We provide a range of services including preventive maintenance, emergency repairs, parts replacement, equipment installation, and maintenance contracts for all kinds of fitness equipment.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>How long has Tecno Fitness Solutions been in business?</span>
+        <span class="accordion-icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        With over 15 years of experience in gym equipment repair and maintenance, we ensure professional service to keep your gym running smoothly.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>How can I contact Tecno Fitness Solutions for service inquiries?</span>
+        <span class="accordion-icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        You can reach us via phone at +91 9895523959, email at info@tecnofitnesssolutions.in, or visit us at our address: 52/2290 Katteth Building, Shine Road, Vyttila, Kochi, Ernakulam, 682019.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Do you offer emergency repair services?</span>
+        <span class="accordion-icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        Yes, we provide prompt emergency repair services to ensure minimal downtime for your fitness equipment.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Are maintenance contracts available?</span>
+        <span class="accordion-icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        Absolutely, we offer maintenance contracts that can help save on potential repair costs and keep your equipment in peak condition.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll('.accordion-item');
+
+    items.forEach(item => {
+      const header = item.querySelector('.accordion-header');
+
+      header.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close all other items
+        items.forEach(i => i.classList.remove('active'));
+
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
